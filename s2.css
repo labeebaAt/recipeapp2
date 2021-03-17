@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Dancing Script";
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: /*#f1f1f1*/ black;
+}
+
+.about-section{
+    background: url(./bg3.jpg) no-repeat left;
+    background-size: 55%;
+    background-color: /*#fdfdfd*/black;
+    overflow: hidden;
+    padding: 100px 0;
+
+}
+
+.inner-container{
+    width: 55%;
+    float: right;
+    background-color: /*#fdfdfd*/black;
+    padding: 150px;
+}
+
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-weight: 900;
+    color: white;
+}
+
+.text{
+    font-size: 20px;
+    color: /*#545454*/whitesmoke;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.skills{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+@media screen and (max-width:1200px){
+    .inner-container{
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .about-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .inner-container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .about-section{
+        padding: 0;
+    }
+    .inner-container{
+        padding: 60px;
+    }
+}
+
+
+
+
+
+
+ul {
+  background-color: white;
+  border-radius: 4px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -7px 9px 17px 0px #00000017;
+}
+li a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+li:hover a {
+  color: crimson;
+}
+nav {
+  position: relative;
+}
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -80px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  background-image: url(https://image.flaticon.com/icons/svg/545/545705.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  cursor: pointer;
+  box-shadow: 0px 0px 17px 0px #00000017;
+  transition: 0.5s ease transform;
+}
+.icon.close {
+  transform: translateY(-50%) rotate(360deg);
+  background-image: url(https://image.flaticon.com/icons/svg/748/748122.svg);
+}
+ul {
+  width: 0px;
+  overflow: hidden;
+  transform: translateX(50px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s ease;
+  padding: 20px;
+}
+nav.show ul {
+  width: 450px;
+  transform: translate(0px);
+  opacity: 1;
+  pointer-events: all;
+}
+nav {
+  position: absolute;
+  top: 10px;
+  right: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  li a {
+    padding: 5px 10px;
+  }
+  nav ul {
+    padding: 15px;
+  }
+  nav.show ul {
+    width: 360px;
+  }
+  .icon {
+    width: 45px;
+    height: 45px;
+    right: -50px;
+  }
+  nav {
+    top: 10px;
+    right: 60px;
+  }
+}
